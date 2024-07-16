@@ -19,4 +19,10 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\AppRoleDtos\" />
+    <Folder Include="Dtos\CustomerAccountDtos\" />
+    <Folder Include="Dtos\CustomerAccountProcessDtos\" />
+  </ItemGroup>
+
 </Project>
