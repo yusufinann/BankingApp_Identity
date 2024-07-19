@@ -1,18 +1,31 @@
 ﻿@model ConfirmMailViewModel
 @{
     Layout = null;
+    var errorMessage = TempData["ErrorMessage"] as string;
 }
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-<form method="post" class="container">
+<div class="container">
     <br />
     <h2>Taşınan Mail Adresi : @ViewBag.v</h2>
     <br />
-    <label>Kullanıcı ID Değeri</label>
-    <input type="text" class="form-control" asp-for="Mail" value="@ViewBag.v" />
-    <br />
-    <label>Mail adresinize gelen 6 haneli kodu giriniz</label>
-    <input type="text" class="form-control" asp-for="ConfirmCode"/>
-    <br />
-    <button class="btn btn-primary">Hesabı Aktifleştir</button>
-</form>
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @errorMessage
+        </div>
+    }
+    <form method="post">
+        <div class="form-group">
+            <label for="Mail">Kullanıcı ID Değeri</label>
+            <input type="text" class="form-control" asp-for="Mail" value="@ViewBag.v" />
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="ConfirmCode">Mail adresinize gelen 6 haneli kodu giriniz</label>
+            <input type="text" class="form-control" asp-for="ConfirmCode" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Hesabı Aktifleştir</button>
+    </form>
+</div>
