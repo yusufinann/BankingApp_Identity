@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
+}
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>@DateTime.Now.ToShortDateString() - Döviz Kurları</h3>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="">
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-caret-square-o-right"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToTry</div>
+                                    <h3>Dolar - TL</h3>
+                                    <p>Güncel $ - ₺ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToTry</div>
+                                    <h3>Euro - TL</h3>
+                                    <p>Güncel € - ₺ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-sort-amount-desc"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.GbpToTry</div>
+                                    <h3>Sterlin - TL</h3>
+                                    <p>Güncel £ - ₺ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-check-square-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToUsd</div>
+                                    <h3>Dolar - Euro</h3>
+                                    <p>Güncel $ - € Kuru</p>
+                                </div>
+                            </div>
+                            <!-- New Currency Rates -->
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-caret-square-o-right"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToEur</div>
+                                    <h3>Dolar - Euro</h3>
+                                    <p>Güncel $ - € Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToGbp</div>
+                                    <h3>Dolar - Sterlin</h3>
+                                    <p>Güncel $ - £ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-sort-amount-desc"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToGbp</div>
+                                    <h3>Euro - Sterlin</h3>
+                                    <p>Güncel € - £ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-check-square-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToJpy</div>
+                                    <h3>Dolar - Yen</h3>
+                                    <p>Güncel $ - ¥ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-caret-square-o-right"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToJpy</div>
+                                    <h3>Euro - Yen</h3>
+                                    <p>Güncel € - ¥ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.GbpToJpy</div>
+                                    <h3>Sterlin - Yen</h3>
+                                    <p>Güncel £ - ¥ Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-sort-amount-desc"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToCad</div>
+                                    <h3>Dolar - Kanada Doları</h3>
+                                    <p>Güncel $ - CAD Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-check-square-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToCad</div>
+                                    <h3>Euro - Kanada Doları</h3>
+                                    <p>Güncel € - CAD Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-caret-square-o-right"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.GbpToCad</div>
+                                    <h3>Sterlin - Kanada Doları</h3>
+                                    <p>Güncel £ - CAD Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.UsdToAud</div>
+                                    <h3>Dolar - Avustralya Doları</h3>
+                                    <p>Güncel $ - AUD Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-sort-amount-desc"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.EurToAud</div>
+                                    <h3>Euro - Avustralya Doları</h3>
+                                    <p>Güncel € - AUD Kuru</p>
+                                </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="tile-stats">
+                                    <div class="icon">
+                                        <i class="fa fa-check-square-o"></i>
+                                    </div>
+                                    <div class="count">@ViewBag.GbpToAud</div>
+                                    <h3>Sterlin - Avustralya Doları</h3>
+                                    <p>Güncel £ - AUD Kuru</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

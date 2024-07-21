@@ -15,6 +15,7 @@ builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context
 
 builder.Services.AddScoped<ICustomerAccountProcessDal,EfCustomerAccountProcessDal>();
 builder.Services.AddScoped<ICustomerAccountProcessService, CustomerAccountProcessManager>();
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
