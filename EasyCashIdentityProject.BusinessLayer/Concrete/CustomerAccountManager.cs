@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EasyCashIdentityProject.BusinessLayer.Concrete
 {
-    internal class CustomerAccountManager : ICustomerAccountService
+    public class CustomerAccountManager : ICustomerAccountService
     {
         private readonly ICustomerAccountDal _customerAccountDal;
 
@@ -26,6 +26,11 @@ namespace EasyCashIdentityProject.BusinessLayer.Concrete
         public CustomerAccount TGetByID(int id)
         {
            return _customerAccountDal.GetByID(id);
+        }
+
+        public List<CustomerAccount> TGetCustomerAccountList(int id)
+        {
+            return _customerAccountDal.GetCustomerAccountList(id);
         }
 
         public List<CustomerAccount> TGetList()
