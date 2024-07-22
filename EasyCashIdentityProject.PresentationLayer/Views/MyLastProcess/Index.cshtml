@@ -1,4 +1,4 @@
-﻿
+﻿@model List<CustomerAccountProcess>
 
 @{
     ViewData["Title"] = "Index";
@@ -11,14 +11,9 @@
             <div class="title_left">
                 <h3>Son İşlemlerim</h3>
             </div>
-
-
         </div>
-
         <div class="clearfix"></div>
-
         <div class="">
-
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
@@ -35,39 +30,38 @@
                     </div>
                     <div class="x_content">
                         <ul class="list-unstyled timeline">
-                          @*  @foreach (var item in Model)
-                            {*@
+                            @foreach (var item in Model)
+                            {
                                 <li>
                                     <div class="block">
                                         <div class="tags">
                                             <a href="" class="tag">
-                                                <span>ProcessType</span>
+                                                <span>@item.ProcessType</span>
                                             </a>
                                         </div>
                                         <div class="block_content">
                                             <h2 class="title">
-                                            <a>Gönderen:Gönderen </a>
+                                                <a>
+                                                    Gönderen: @(item.SenderCustomer?.AppUser != null ? item.SenderCustomer.AppUser.Name + " " + item.SenderCustomer.AppUser.Surname : "Bilinmiyor")
+                                                    ---
+                                                    Alıcı: @(item.ReceiverCustomer?.AppUser != null ? item.ReceiverCustomer.AppUser.Name + " " + item.ReceiverCustomer.AppUser.Surname : "Bilinmiyor")
+                                                </a>
                                             </h2>
                                             <div class="byline">
-                                                <span>ProcessDate</span>
+                                                <span>@item.ProcessDate</span>
                                             </div>
                                             <p class="excerpt">
-                                               Description
+                                                @item.Description
                                             </p>
                                         </div>
                                     </div>
                                 </li>
-                           @* }*@
+                            }
                         </ul>
-
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
     </div>
     <div class="clearfix"></div>
 </div>

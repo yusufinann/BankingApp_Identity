@@ -29,7 +29,7 @@ namespace EasyCashIdentityProject.PresentationLayer.Controllers
         public async Task<IActionResult> Index(SendMoneyForCustomerAccountProcessDto sendMoneyForCustomerAccountProcessDto)
         {
             var context = new Context();
-
+            //Sisteme authenticate olan kullanıcıyı yakalayalım;
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             var receiverAccount = context.CustomerAccounts.FirstOrDefault(x => x.CustomerAccountNumber == sendMoneyForCustomerAccountProcessDto.ReceiverAccountNumber);
             var senderAccount = context.CustomerAccounts.FirstOrDefault(x => x.AppUserID == user.Id && x.CustomerAccountCurrency == "Türk Lirası");
